@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LandingPage</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        #blog-body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px 25px;
+            max-width: 1200px;
+            margin: auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            flex-wrap: wrap;
+        }
+
+        .profile, .main, .right {
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 10px;
+            background-color: #ffffff;
+        }
+
+        .profile {
+            flex: 1 1 25%;
+            text-align: center;
+        }
+
+        .profile img {
+            width: 100%;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .main {
+            flex: 1 1 50%;
+        }
+
+        #banner {
+            background-color: brown;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+        }
+
+        #banner:hover {
+            background-color: beige; /* Change to beige on hover */
+            color: brown; /* Change text color to brown on hover */
+        }
+
+        .content h1 {
+            font-size: 1.8em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .content p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .right {
+            flex: 1 1 20%;
+            border-left: 1px solid #ddd;
+        }
+
+        .right h2 {
+            font-size: 1.5em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .right p {
+            color: #666;
+            font-size: 0.9em;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .profile, .main, .right {
+                flex: 1 1 100%;
+                margin: 10px 0;
+            }
+            .right {
+                border-left: none;
+                border-top: 1px solid #ddd;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section id="blog-body">
+
+        <div class="container">
+            <div class="profile">
+                <img src="10.png" alt="Profile picture">
+                <p>
+                    <strong>LEVI</strong>, This webpage is dedicated to Levi Richard, showcasing his diverse interests and passions. From his studies in Computer Engineering at Covenant University to his love for football and music, Levi embodies a dynamic blend of creativity and technical expertise. Explore his journey and discover what inspires him as he navigates the exciting world of technology and personal growth.
+                </p>
+            </div>
+
+            <div class="main">
+                <div id="banner">
+                    <h1>Welcome to Codex Blog</h1>
+                </div> 
+                <div class="content">
+                    <h1><strong>Bio</strong></h1>
+                    <p>
+                        Levi Richard, a 20-year-old dynamic individual, is currently navigating the exciting journey of higher education at Covenant University, where he is pursuing a degree in Computer Engineering. With an innate curiosity for technology and a profound passion for innovation, Levi has immersed himself in the world of computing, eager to harness the power of technology to make a difference.
+                    </p>
+                    <p>
+                        From a young age, Levi exhibited a keen interest in how things work, often dismantling gadgets and electronics just to understand their inner workings. This fascination naturally evolved into a passion for coding, where he found his niche in programming languages such as C and Python. His proficiency in these languages not only reflects his technical skills but also his ability to think critically and solve complex problems—qualities that are essential in the ever-evolving tech landscape.
+                    </p>
+                    <p>
+                        Beyond his academic pursuits, Levi is also an avid football enthusiast. Whether on the field or cheering from the sidelines, he finds joy in the camaraderie and teamwork that the sport fosters. Football serves as an excellent outlet for him, allowing him to balance his rigorous studies with physical activity and social interaction. His competitive spirit and dedication to the game mirror his approach to life: always striving for excellence while enjoying the journey.
+                    </p>
+                    <p>
+                        In addition to his technical and athletic talents, Levi has a deep appreciation for music. In his spare time, he explores this creative outlet by making music, blending various genres and styles to express himself. Music serves as both a refuge and a source of inspiration for him, enabling him to unwind after a long day of classes and coding projects. Whether he's strumming a guitar or experimenting with digital audio workstations, Levi finds joy in creating melodies that resonate with others.
+                    </p>
+                    <p>
+                        As he continues his studies at Covenant University, Levi is excited about the future and the endless possibilities that lie ahead. He dreams of combining his love for technology with his creative passions, aspiring to develop innovative solutions that enhance people's lives. With his strong foundation in computer engineering, coupled with his diverse interests in sports and music, Levi Richard is poised to make a significant impact in the tech industry and beyond.
+                    </p>
+                    <p>
+                        In summary, Levi is not just a student; he is a multifaceted individual with a bright future ahead. His journey at Covenant University is just the beginning as he seeks to explore new horizons, tackle challenges head-on, and contribute to a world that thrives on creativity and technological advancement.
+                    </p>
+                </div>
+            </div>
+
+            <div class="right">
+                <h2>Random Thoughts</h2>
+                <p>Curiosity as a Catalyst: Levi’s early fascination with gadgets shows how curiosity can spark lifelong learning. What if educational systems prioritized hands-on exploration?
+                </p>
+                <p>Coding and music both require creativity and structure. How can we better integrate the arts into STEM to nurture well-rounded innovators?</p>
+                <p>Balance in Life: Levi balances academics, football, and music, highlighting the need for work-play equilibrium. How can we encourage others to find their balance?
+                </p>
+                <p>The camaraderie in football mirrors collaboration in tech. How can sports teamwork principles enhance collaboration in tech projects?</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

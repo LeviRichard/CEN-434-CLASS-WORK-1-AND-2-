@@ -10,7 +10,7 @@
     <div class="container">
         <div class="centered-div" >
             <form action ="/submit" method = "POST">
-                <h1>CU SPORTS</h1>
+                <h1>REGISTER</h1>
                 <label for="firstname">Firstname:</label>
                 <input type="text" id="firstname" name="firstname" placeholder="write here" required><br>
                 <label for="lastname">Lastname:</label>
@@ -20,20 +20,15 @@
                 <input type="email" id="email" name="email"  placeholder="write here" required><br>
     
                 <label for="age">Age:</label>
-                <input type="date" id="age" name="age" required><br>
+                <input type="number" id="age" name="age"  placeholder="DD/MM/YYYY" required><br>
                 <section style="border: black">
-                    <label for="gender">Gender</label><br>
+                    <label for="gender">Gender:</label>
                     <input type="radio" name="gender" value="male">
-                    <label for="male">Male</label><br>
+                    <label for="male">Male</label>
                     <input type="radio" name="gender" value="female">
                     <label for="female">Female</label><br><br>
                 </section>
-                <input type="submit" name="Submit"><br>
-    
-    
-    
-    
-    
+                <button type="submit">Sign up</button><br>
             </form>
         </div>
     </div>
