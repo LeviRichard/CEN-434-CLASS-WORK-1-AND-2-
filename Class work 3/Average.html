@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Average Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .calculator {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input {
+            width: 80%;
+            padding: 10px;
+            padding-right:10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        h2 {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+    </style>
+    <script type="text/javascript">
+        function calculateAverage(numbers){
+            if(numbers.length === 0){
+                return "No numbers provided.";
+            }
+            const sum = numbers.reduce((acc, num) => acc + num, 0);
+            const average = sum / numbers.length;
+            return average.toFixed(2);
+        }
+
+        function computeAverage(){
+            const input = document.getElementById("numbers").value;
+            const numberArray = input.split(',').map(num => parseFloat(num.trim())).filter(num => !isNaN(num));
+            const result = calculateAverage(numberArray);
+            document.getElementById("result").innerText = `The average is: ${result}`;
+        }
+    </script>
+</head>
+<body>
+    <div class="calculator">
+        <h1>Average Calculator</h1>
+        <label for="numbers">
+            Enter Numbers (comma-separated):
+        </label>
+        <input type="text" id="numbers" required>
+        <button onclick="computeAverage()">Calculate Average</button>
+        <h2 id="result"></h2>
+    </div>
+</body>
+</html>

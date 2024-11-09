@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combination Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .calculator {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        h2 {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+    </style>
+    <script type="text/javascript">
+        function factorial(n) {
+            if (n <= 1) return 1;
+            let result = 1;
+            for (let i = 2; i <= n; i++) {
+                result *= i;
+            }
+            return result;
+        }
+
+        function combination(n, r) {
+            if (r > n) return 0; // Not possible to choose more elements than available
+            return factorial(n) / (factorial(r) * factorial(n - r));
+        }
+
+        function findCombination(X, Y) {
+            if (X > Y) {
+                return combination(X, Y);
+            } else if (Y > X) {
+                return combination(Y, X);
+            } else { // X == Y
+                return combination(X + 1, Y);
+            }
+        }
+
+        function computeCombination() {
+            const X = parseInt(document.getElementById("inputX").value, 10);
+            const Y = parseInt(document.getElementById("inputY").value, 10);
+            
+            if (isNaN(X) || isNaN(Y)) {
+                document.getElementById("result").innerText = "Please enter valid numbers!";
+                return;
+            }
+
+            const result = findCombination(X, Y);
+            document.getElementById("result").innerText = `Combination result: ${result}`;
+        }
+    </script>
+</head>
+<body>
+    <div class="calculator">
+        <h1>Combination Calculator</h1>
+        <label for="inputX">Enter X:</label>
+        <input type="number" id="inputX" required>
+        <label for="inputY">Enter Y:</label>
+        <input type="number" id="inputY" required>
+        <button onclick="computeCombination()">Calculate Combination</button>
+        <h2 id="result"></h2>
+    </div>
+</body>
+</html>
